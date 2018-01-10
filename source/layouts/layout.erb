@@ -16,50 +16,36 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 
   <script type="text/javascript">
-
-    const tl = new TimelineLite();
-    const i1 = document.getElementById("img1");
-    const i2 = document.getElementById("img2");
-    const i3 = document.getElementById("img3");
-    const i4 = document.getElementById("img4");
-    const s1 = document.getElementById("slider1");
-    const s2 = document.getElementById("slider2");
-    const s3 = document.getElementById("slider3");
-    const s4 = document.getElementById("slider4");
-    const s5 = document.getElementById("slider5");
-    // const w1 = document.getElementById("wds1");
-    // const w2 = document.getElementById("wds2");
-    // const w3 = document.getElementById("wds3");
-    // const w4 = document.getElementById("wds4");
-    // const w5 = document.getElementById("wds5");
-
-    const btn = document.getElementById("btn-treehouse");
+    const i1 = document.getElementById("img1"),
+      i2 = document.getElementById("img2"),
+      i3 = document.getElementById("img3"),
+      i4 = document.getElementById("img4"),
+      s1 = document.getElementById("slider1"),
+      s2 = document.getElementById("slider2"),
+      s3 = document.getElementById("slider3"),
+      s4 = document.getElementById("slider4"),
+      s5 = document.getElementById("slider5"),
+      btn = document.getElementById("btn-treehouse")
+      tl = new TimelineLite();
 
     tl.from(i1, 1, {autoAlpha:0})
-    .from(s1, 1, {autoAlpha: 0})
-    .from(s2, 1, {autoAlpha: 0})
-    .to(s1, 1, {x: +364, autoAlpha: 0})
-    .to(s2, 1, {x: -364, autoAlpha: 0})
+    .from(s1, 0.5, {autoAlpha: 0})
+    .from(s2, 0.5, {autoAlpha: 0})
+    .to(s1, 0.5, {x: +364, autoAlpha: 0})
+    .to(s2, 0.5, {x: -364, autoAlpha: 0})
 
     .from(i2, 1, {autoAlpha:0})
-    .from(s3, 1, {autoAlpha: 0})
+    .from(s3, 0.5, {autoAlpha: 0})
     .to(s3, 2, {x: +364, autoAlpha: 0})
 
     .from(i3, 1, {autoAlpha:0})
-    .from(s4, 1, {autoAlpha: 0})
-    .from(s5, 1, {autoAlpha: 0})
-    .to(s4, 1, {x: -364, autoAlpha: 0})
-    .to(s5, 1, {x: +364, autoAlpha: 0})
+    .from(s4, 0.5, {autoAlpha: 0})
+    .from(s5, 0.5, {autoAlpha: 0})
+    .to(s4, 0.5, {x: -364, autoAlpha: 0})
+    .to(s5, 0.5, {x: +364, autoAlpha: 0})
 
     .from(i4, 1, {autoAlpha:0})
-    .from(btn, 1, {top: 0, autoAlpha: 0}, "stagger");
-
-
-    // tl.seek("stagger");
-    // const images = document.body.querySelectorAll('img');
-    // const timeline = new TimelineMax({repeat:-1});
-    // timeline.append(TweenMax.staggerTo(images, 1, {css:{autoAlpha:1}, repeat:1, yoyo:true, repeatDelay:.5}, 2.5));
-
+    .from(btn, 1, {top: 0, autoAlpha: 0});
   </script>
 </body>
 </html>
